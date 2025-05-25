@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby Diaries</title>
+    <link rel="icon" type="image/png" href="/Pencil.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- View Post Modal -->
+    <div id="viewPostModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="viewPostTitle"></h2>
+                <span class="close-modal" id="closeViewPost">&times;</span>
+            </div>
+            <div class="post-modal-content">
+                <div class="post-meta">
+                    <span id="viewPostDate" class="date"></span>
+                    <span id="viewPostTag" class="tag"></span>
+                </div>
+                <img id="viewPostImage" src="" alt="">
+                <p id="viewPostAuthor" class="author"></p>
+                <div id="viewPostContent" class="content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div id="createPostModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Post</h2>
+                <span class="close-modal" id="closeCreatePost">&times;</span>
+            </div>
+            <form id="createPostForm">
+                <div class="form-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="postAuthor">Author</label>
+                    <input type="text" id="postAuthor" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="postContent">Content</label>
+                    <textarea id="postContent" name="content" rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="postTag">Category</label>
+                    <select id="postTag" name="tag" required>
+                        <option value="ART">Art</option>
+                        <option value="FOOD">Food</option>
+                        <option value="TRAVEL">Travel</option>
+                        <option value="FITNESS">Fitness</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-post-button">Post</button>
+            </form>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="subtitle">A Blog For All Your Interests</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <button class="create-post-button" id="openCreatePost">CREATE POST</button>
+            </div>
+        </nav>
+        
+        <h1 class="site-title">
+            <div class="typing-container">
+                <span class="typing-text"></span><span class="cursor">|</span>
+            </div>
+        </h1>
+        
+        <div class="categories">
+            <span class="category-tag active" data-tag="ALL">ALL</span>
+            <span class="category-tag" data-tag="ART">ART</span>
+            <span class="category-tag" data-tag="FOOD">FOOD</span>
+            <span class="category-tag" data-tag="TRAVEL">TRAVEL</span>
+            <span class="category-tag" data-tag="FITNESS">FITNESS</span>
+        </div>
+    </header>
+
+    <main class="blog-grid">
+        <!-- Posts will be dynamically added here -->
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2025, ZAINAB</p>
+            <p>ALL RIGHTS RESERVED</p>
+            <p>BY ZAINAB AHMED</p>
+        </div>
+    </footer>
+
+    <script src="/js/sample-posts.js"></script>
+    <script src="/js/typing-animation.js"></script>
+    <script src="/js/blog-functionality.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
