@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (charIndex < text.length) {
             typingText.textContent += text.charAt(charIndex);
             charIndex++;
-            setTimeout(type, 150); // Adjust typing speed here (milliseconds)
+            setTimeout(type, 150);
         } else {
-            cursor.style.animation = 'blink 0.7s infinite'; // Restore cursor blink after typing
+            cursor.style.animation = 'blink 0.7s infinite'; 
         }
     }
 
     // Start typing animation with a small delay
     setTimeout(() => {
-        cursor.style.animation = 'none'; // Stop cursor blink during typing
+        cursor.style.animation = 'none'; 
         type();
     }, 1000);
 }); 
